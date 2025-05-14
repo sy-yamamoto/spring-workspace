@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>商品確認</title>
+</head>
+<body>
+
+    <h1>商品情報</h1>
+
+    商品名：[[${name}]]<br>  <!--  Thymeleafでの変数の短縮表記  -->
+	<!--<p th:text="${name}"></p>---><!-- 上記の商品名：[[${name}]]<br>の別の書き方、書き方はどちらでもよい -->
+    価格：[[${price}]]円<br>
+
+</body>
+</html>

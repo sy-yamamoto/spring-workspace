@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>研修お問い合わせ</title>
+</head>
+<body>
+	<h1　th:text="${genre}+'ありがとうございました。'">。</h1>
+	<p>以下の内容にて受け付けました</p>
+	<table border ="1">
+		<tr>
+			
+			<th>言語</th>
+			<th>
+				<span th:each="lang:${langList}" 
+				th:text="${lang}+','">
+					
+				</span>
+			</th>
+		</tr>
+		<tr>
+			<th>詳細内容</th>
+			<th th:text="${detail}"></th>
+		</tr>
+		<tr>
+			<th>実施予定日</th>
+			<th th:text="${dueDate}"></th>
+		</tr>
+		<tr>
+			<th>お名前</th>
+			
+				<th th:text="${name}"></th>
+			
+			</tr>
+		<tr>
+			<th>メールアドレス</th>
+			<th th:text="${email}"></th>
+		</tr>	
+	</table>
+</body>
+</html>
