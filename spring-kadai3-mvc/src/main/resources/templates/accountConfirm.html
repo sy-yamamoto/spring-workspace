@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>登録内容確認</h1>
+<p>以下の内容で登録します</p>
+<ul th:if="${errors}">
+		<li th:each="error:${errors}" th:text ="${errors}"></li>
+	</ul>
+<table border = "1">
+	<tr>
+		<th>名前</th>
+		<th th:text="${name}">
+		</th>
+	</tr>
+	<tr>
+			<th>メールアドレス</th>
+			<th th:text="${email}">
+			</th>
+		</tr>
+		<tr>
+				<th>パスワード</th>
+				<th th:text="${password}">
+				</th>
+			</tr>
+</table>
+</body>
+</html>

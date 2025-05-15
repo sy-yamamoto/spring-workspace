@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ショッピングカート</title>
+</head>
+<body>
+<h1>ショッピングカート</h1>
+<form action="/cart/add" method="post">
+	<p>
+		<input type="text" name="name" placeholder="商品名">
+	
+	
+		<input type="number"name="price" placeholder="価格"></textarea>
+	</p>
+	<p>
+		<button>カートに追加</button>
+	</p>
+</form>
+
+	<table border = "1">
+		
+		<tr>
+			<th>商品</th>
+			<th>価格</th>
+		</tr>
+		<tr th:each="item:${@cart.items}">
+		<td th:text="${item.name}"></td>
+		<td th:text="${item.price}"></td>
+		</tr>
+	</table>
+	
+<a href="/cart/clear">カートのクリア</a>
+	
+	
+	
+
+</body>
+</html>
